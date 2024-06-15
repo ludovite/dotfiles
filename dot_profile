@@ -1,0 +1,23 @@
+export QT_QPA_PLATFORMTHEME=qt5ct
+export EDITOR=nvim
+# export VISUAL=mousepad
+# export USE_SYMENGINE=1
+export MANPAGER="nvim +Man!"
+
+if [ -d "$HOME/.local/bin" ]; then
+   export PATH="$HOME/.local/bin:$PATH"
+fi
+
+export BAT_THEME=Nord
+# GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
+# if [ -n "$GEM_HOME" ]; then
+#    export GEM_HOME
+#    export PATH="$PATH:$GEM_HOME/bin"
+# fi
+# export GOPATH=~/.local/src/go
+export TEXMFHOME=~/.local/src/monlatex/
+# export JUPYTERLAB_DIR=$HOME/.local/share/jupyter/lab
+
+# Required for user systemd file: ~/.config/systemd/user/ssh-agent.service
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+export GRAVEYARD "$HOME/.local/share/Trash-Graveyard"
