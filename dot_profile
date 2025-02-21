@@ -1,4 +1,11 @@
-export PATH="~/.local/bin:$PATH"
-export EDITOR="nvim"
+if [ -d "$HOME/.local/bin" ]; then
+   export PATH="$HOME/.local/bin:$PATH"
+fi
+
+export EDITOR=nvim
 export QT_STYLE_OVERRIDE="kvantum"
+export LIBVIRT_DEFAULT_URI="qemu:///system"
+
+# Required for user systemd file: ~/.config/systemd/user/ssh-agent.service
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+
